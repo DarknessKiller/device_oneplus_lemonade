@@ -11,10 +11,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lemonade device
 $(call inherit-product, device/oneplus/lemonade/device.mk)
 
-# Inherit some common PEX stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_lemonade
+RISING_MAINTAINER := "ItsGoYoung"
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_PIXEL_FINGERPRINT := false
+WITH_GMS := true
+TARGET_CORE_GMS := true
+
+PRODUCT_NAME := lineage_lemonade
 PRODUCT_DEVICE := lemonade
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
