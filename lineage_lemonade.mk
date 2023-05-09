@@ -11,14 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lemonade device
 $(call inherit-product, device/oneplus/lemonade/device.mk)
 
+# RisingOS Configs
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-RISING_MAINTAINER := "ItsGoYoung"
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := true
 TARGET_USE_PIXEL_FINGERPRINT := false
 WITH_GMS := true
 TARGET_CORE_GMS := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+RISING_MAINTAINER := "DarknessKiller"
 
 PRODUCT_NAME := lineage_lemonade
 PRODUCT_DEVICE := lemonade
